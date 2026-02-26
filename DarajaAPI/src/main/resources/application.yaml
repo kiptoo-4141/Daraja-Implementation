@@ -31,8 +31,9 @@ daraja:
   account-balance-url: https://sandbox.safaricom.co.ke/mpesa/accountbalance/v1/query
 
   # Your credentials from Safaricom Developer Portal
-  consumer-key: 5SxQUyzPiKK0xtPHYL6ZOTcArHVYczZdfAn8A6ZWSfmaT9T9
-  consumer-secret: iLQRG97kIWJnTt9s187qulUkDRTF9Hwz1z4IiNTY2drG9mQU1B8Hni2sRihnbgqm
+  consumer-key: 
+  consumer-secret: 
+  
 
   # Business details
   short-code: 174379
