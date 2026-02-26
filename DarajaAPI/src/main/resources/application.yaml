@@ -1,0 +1,50 @@
+spring:
+  application:
+    name: DarajaAPI
+server:
+  port: 8080
+
+
+  datasource:
+    url: jdbc:h2:mem:darajadb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+# Daraja API Configuration
+daraja:
+  # Sandbox URLs (Use production URLs for live environment)
+  auth-url: https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials
+  stk-push-url: https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest
+  b2c-url: https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest
+  transaction-status-url: https://sandbox.safaricom.co.ke/mpesa/transactionstatus/v1/query
+  account-balance-url: https://sandbox.safaricom.co.ke/mpesa/accountbalance/v1/query
+
+  # Your credentials from Safaricom Developer Portal
+  consumer-key: 5SxQUyzPiKK0xtPHYL6ZOTcArHVYczZdfAn8A6ZWSfmaT9T9
+  consumer-secret: iLQRG97kIWJnTt9s187qulUkDRTF9Hwz1z4IiNTY2drG9mQU1B8Hni2sRihnbgqm
+
+  # Business details
+  short-code: 174379
+  passkey: YOUR_PASSKEY
+  callback-url: https://your-domain.com/api/v1/callback
+  result-url: https://your-domain.com/api/v1/result
+
+  # B2C Configuration
+  initiator-name: testapi
+  initiator-password: YOUR_INITIATOR_PASSWORD
+  security-credential: YOUR_SECURITY_CREDENTIAL
+
+logging:
+  level:
+    com.example.daraja: DEBUG
